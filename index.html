@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090d18">
+    <title>Scamex | Message Investigator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="topbar">
+        <a class="brand" href="#">Scamex</a>
+        <span class="status"><i></i> LOCALSCANNER</span>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <p class="eyebrow">YOUR DIGITAL INVESTIGATOR DESK</p>
+            <h1>Trust nothing.<br><span>Verify everything.</span></h1>
+            <p class="subtitle"></p>
+                Investigate suspicious messages and learn to recognise common scam warning signs.
+            </p>
+        </section>
+
+        <section class="panel">
+            <label for="message">MESSAGE TO INVESTIGATE</label>
+            <textarea
+            id="message"
+            maxlength="5000"
+            placeholder="Paste a suspicious message here..."
+        ></textarea>
+
+        <div class="actions">
+            <span id="charCount">0/5000</span>
+            <button id="scanButton">SCAN MESSAGE </button>
+        </div>
+
+        <button id="exampleButton" class="text-button">
+            Load a sample message
+        </button>
+        <p id="error" class="error" role="alert" hidden></p>
+    </section>
+
+    <section id="results" class="panel results" aria-live="polite" hidden>
+        <p class="eyebrow">INVESTIGATION REPORT</p>
+        <h2 id="verdict">Scan results</h2>
+        <p id="summary"></p>
+
+        <div class="meter">
+            <div id="meterFill"></div>
+        </div>
+        <p id="scoreText" class="score-text"></p>
+
+        <h3>Evidence found</h3>
+        <div id="clues"></div>
+        <p class="disclaimer">
+            This tool uses simple text-marching rules. A high score does not prove a scam, and a low score does not prove a message is safe.
+        </p>
+    </section>
+    
+    <footer>
+        SCAMEX v0.1 : EDUCTATIONAL CYBERSECURITY PROJECT
+    </footer>
+    </main>
+</body>
+</html>
